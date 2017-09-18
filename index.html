@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <title></title>
+</head>
+<body>
+<div class="container">
+    <div class="date">31 JULY 2017</div>
+    <div class="gadget-header">
+        <div class="groups">
+            <div class="group"><img src="assets/Arsenal_FC.svg"/> <span>Arsenal</span></div>
+            <div class="group"><span>Westham</span><img src="assets/West_Ham_United_FC.svg"/></div>
+        </div>
+    </div>
+    <div class="carousel-wrapper">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+               <div class="carousel-box info-card row">
+                   <div class="summary">
+                       <img class="stroke-left" src="assets/stroke.svg"/>
+                       <img class="stroke-right visible-xs" src="assets/stroke.svg"/>
+                       <div class="summary-inner"><span>1/9</span><div class="middle">NO SCORE</div>FIRST HALF</div>
+                   </div>
+                   <!--<span></span>-->
+                   <div class="description ">
+                       <img class="stroke-right hidden-xs" src="assets/stroke.svg"/>
+                       <div class="description-inner">Only in 1 out of Westham's past 9 matches, they failed to score in the first half</div>
+                   </div>
+               </div>
+            </div>
+            <div class="item">
+                <div class="carousel-box"></div>
+            </div>
+            <div class="item">
+                <div class="carousel-box"></div>
+            </div>
+        </div>
+
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+    </div>
+    <p class="bottom-title">Who will win ?</p>
+    <ul class="buttons-wrapper">
+        <li class="vote-btn" onClick="vote()">WH</li>
+        <li class="vote-btn" onClick="vote()">DRAW</li>
+        <li class="vote-btn" onClick="vote()">ARS</li>
+    </ul>
+</div>
+<script>
+    function vote(){
+        $(".vote-btn").css("background-position", "30%");
+    }
+</script>
+</body>
+</html>

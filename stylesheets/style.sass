@@ -1,0 +1,156 @@
+$mobile: "only screen and (max-width : 572px)" //max-width:320
+$tablet: "only screen and (min-device-width: 768px)and (max-device-width: 1024px)"
+$big-screen: "only screen and (min-device-width: 1025px)"
+$gadget-theme-color: #1e1f44
+
+.container
+    position: relative
+    width: 100%
+    max-height: 660px
+    padding: 0
+    @media #{$big-screen}
+        max-width: 572px
+    @media #{$mobile}
+        max-height: 450px
+    .date
+        position: absolute
+        top: 10px
+        width: 100%
+        text-align: center
+        font-size: 12px
+        color: white
+        @media #{$mobile}
+            top: 8px
+            font-size: 10px
+
+.gadget-header
+    width: 100%
+    height: 80px //14%
+    padding: 20px 20px 0 20px
+    background-color: $gadget-theme-color
+    color: white
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.12)
+    @media #{$mobile}
+        height: 65px
+        padding: 12.5px 20px 0 12.5px
+
+    .groups
+        display: flex
+        justify-content: space-between
+        font-size: 24px
+        @media #{$mobile}
+            font-size: 18px
+        img
+            width: 40px
+            height: 40px
+        span
+            padding-right: 8px
+
+.carousel-wrapper
+    position: relative
+    padding-top: 40px
+    padding-bottom: 20px
+.carousel-box
+    display: flex
+    width: 70%
+    min-height: 200px
+    margin: 0 auto
+    border-radius: 10px
+    background-color: #ffffff
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.12)
+    @media #{$mobile}
+        flex-direction: column
+.info-card
+    .summary
+        display: flex
+        flex: 1
+        position: relative
+        .summary-inner
+            margin: auto
+            text-align: center
+            span
+                text-align: center
+                font-size: 38px
+            .middle
+                font-weight: bold
+                font-size: 18px
+            @media #{$mobile}
+                font-size: 10px
+                .middle
+                    font-size: 12px
+    .stroke-left
+        position: absolute
+    .stroke-right
+        position: absolute
+        right: 0
+        -moz-transform: scaleX(-1)
+        -o-transform: scaleX(-1)
+        -webkit-transform: scaleX(-1)
+        transform: scaleX(-1)
+        filter: FlipH
+        -ms-filter: "FlipH"
+
+    .description
+        display: flex
+        flex: 1
+        position: relative
+        padding-right: 20px
+        font-size: 20px
+        @media #{$mobile}
+            flex: 2
+            padding-right: 10px
+            padding-left: 10px
+            font-size: 16px
+        .description-inner
+            margin: auto
+
+.carousel-inner
+    .item
+        padding-top: 10px
+        padding-bottom: 10px
+
+.carousel-indicators
+    bottom: -30px
+    li
+        width: 8px
+        height: 8px
+        border-color: #4a4a4a
+    .active
+        width: 8px
+        height: 8px
+        margin: 1px
+        background-color: rgba(74, 74, 74, 0.7)
+
+.carousel-control.right, .carousel-control.left
+    background-image: none
+    color: black
+    &:hover
+        color: dimgrey
+
+.bottom-title
+    text-align: center
+    font-size: 21px
+    font-weight: 900
+    color: #1e2045
+
+.buttons-wrapper
+    display: flex
+    justify-content: center
+    margin-bottom: 0
+    padding-left: unset
+    list-style-type: none
+    li
+        display: flex
+        float: left
+        width: 80px
+        height: 40px
+        align-items: center
+        justify-content: center
+        margin: 0 8px
+        border-radius: 100px
+        background-color: $gadget-theme-color
+        color: white
+        background-image: linear-gradient(to left, transparent,transparent 50%, #00c6ff 50%,#00c6ff)
+        background-position: 100% 0
+        background-size: 200% 100%
+        transition: all .5s ease-in
